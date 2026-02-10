@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - uv-build
   run:
@@ -28,11 +28,9 @@ requirements:
 
 tests:
   - python:
-      imports:
-        - sqlite_anyio
-  - requirements:
-      run:
-        - python ${{ python_min }}
+      imports: sqlite_anyio
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
   summary: Asynchronous client for SQLite using AnyIO
