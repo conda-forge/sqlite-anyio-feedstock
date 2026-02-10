@@ -1,5 +1,5 @@
 {% set name = "sqlite-anyio" %}
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sqlite_anyio-{{ version }}.tar.gz
-  sha256: 5ab7b8def2ddd090d6a37173ee1a9f54d49e3ec26c7684dc55359f012d6d540d
+  sha256: 7e1bb604f41da329f58e45fe76b6542816af3b199be0f667d00457e7d43a9c98
 
 build:
   noarch: python
