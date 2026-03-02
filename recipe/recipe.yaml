@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sqlite-anyio
-  version: 0.2.5
+  version: "0.2.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sqlite_anyio-${{ version }}.tar.gz
-  sha256: 7e1bb604f41da329f58e45fe76b6542816af3b199be0f667d00457e7d43a9c98
+  sha256: b64f1b7e3ef34c6fa38700889e382956aa8ee150bc76a10311f793c2c38f1b22
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - anyio >=4.0,<5.0
+    - typing_extensions >=4.15.0
 
 tests:
   - python:
