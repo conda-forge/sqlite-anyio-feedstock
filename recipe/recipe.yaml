@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv-build
+    - hatchling
   run:
     - python >=${{ python_min }}
     - anyio >=4.14.0,<5.0.0
@@ -31,7 +31,9 @@ tests:
   - python:
       imports: sqlite_anyio
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Asynchronous client for SQLite using AnyIO
